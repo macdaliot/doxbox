@@ -2,9 +2,10 @@
 
 Active reconaissance, information gathering and OSINT built in a portable web application
 
-![screenshot](/extras/screenshot.png)
-
 [![Build Status](https://travis-ci.org/ex0dus-0x/D0xk1t.svg)](https://travis-ci.org/ex0dus-0x/D0xk1t)
+
+
+![screenshot](/extras/screenshot.png)
 
 ### CHANGELOG
 
