@@ -13,12 +13,26 @@
 <div class="col-lg-12">
   <div class="panel panel-default">
     <div class="panel-body">
-      <h3>WHOIS </h3><p>
-        <table class="table">
-          <tr><th scope="row">Email </th><td>{{ whois.creation_date }}</td></tr>
-        </table>
-      </p>
-     </div>
+      {% if whois != None %}
+          <h4>Domain Information</h4>
+          <p><b>Updated Date:</b> {{ whois.updated_date }}</p>
+          <p><b>Domain Name:</b> {{ whois.domain_name }}</p>
+          <p><b>Expiration Date:</b> {{ whois.expiration_date }}</p>
+          <p><b>Registrar:</b> {{ whois.registrar }}</p>
+        <hr />
+          <h4>Owner Information</h4>
+          <p><b>Name:</b> {{ whois.name }}</p>
+          <p><b>Address:</b> {{ whois.address }}</p>
+          <p><b>City:</b> {{ whois.city }}</p>
+          <p><b>State:</b> {{ whois.state }}</p>
+          <p><b>Country:</b> {{ whois.country }}</p>
+          <p><b>ZIP Code:</b> {{ whois.zipcode }}</p>
+        <hr />
+          <h4>Subdomains</h4> 
+          {% for domain in subdomain %}<p>{{ domain }}</p>{% endfor %}
+        </p>
+      {% endif %}
+    </div>
   </div>
 </div>
 {% endblock %}

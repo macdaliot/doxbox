@@ -24,5 +24,3 @@ ONLINE_LAST_MINUTES = 5
 # secret key. 
 
 SECRET_KEY = 'SECRET_KEY_HERE'
-
-

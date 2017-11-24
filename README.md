@@ -2,9 +2,26 @@
 
 Active reconaissance, information gathering and OSINT built in a portable web application
 
+![screenshot](/extras/screenshot.png)
 
-![logo](/extras/screenshot.png)
+[![Build Status](https://travis-ci.org/ex0dus-0x/D0xk1t.svg)](https://travis-ci.org/ex0dus-0x/D0xk1t)
 
+### CHANGELOG
+
+11/24/17
+
+* Added YAML support for Dox
+* Added DNS Enumeration
+* Refactored code, added comments
+* Jinja filters for more intuitive interactions
+
+#### TODO:
+
+* Add webNmap function
+* Change screenshot / wallpaper
+* Cut down HTML templating
+
+---
 
 ## 1.0 Introduction
 
