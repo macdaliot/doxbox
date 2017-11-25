@@ -4,7 +4,6 @@ Active reconaissance, information gathering and OSINT built in a portable web ap
 
 [![Build Status](https://travis-ci.org/ex0dus-0x/D0xk1t.svg)](https://travis-ci.org/ex0dus-0x/D0xk1t)
 
-
 ![screenshot](/extras/screenshot.png)
 
 ### CHANGELOG
@@ -42,7 +41,7 @@ Yes. D0xk1t will forever be open-source. If you wish to contribute, you can make
 
 4. __How else can I develop on this?__
 
-I am currently working on API endpoints for D0xk1t. 
+I have created API endpoints, and more will be coming soon.
 
 ---
 
@@ -87,10 +86,9 @@ Open `config.py`. Here, you will see all the environmental variables that the ap
 
 `SECRET_KEY` is the private key utilized by WTForm's CSRF protection feature. If deployed, change it to your liking.
 
-
 ### 3.3 Deployment
 
-Once installed, run with `python run.py`. The application will run a first-time boot, and will then be accessible at `127.0.0.1:5000`. Login with credentials, and you will be present with the admin panel.
+Once installed, run with `python run.py`. The application will run a first-time boot, and will then be accessible at `127.0.0.1:5000`. 
 
 Of course, this is self-hosting on localhost. Although work-in-progress, D0xk1t will soon support hosting on a variety of SaaS and server stacks of your choice.
 
@@ -118,17 +116,17 @@ the reconaissance stage of the killchain.
 * Google Maps support for accurate GeoIP visualization
 * API endpoint support for command-liners or developers.
 
+### DNS Enumeration Module
+
+Targets, whether it be a company or a person, may utilize domains in order to display web content. Domains, especially those that are not properly configured, give penetration testers great opportunity to gather sensitive information in the
+form of metadata, whether it be an address from a WHOIS lookup, or nameservers.
+
 ---
 
-# How to Contribute
+## 5.0 How to Contribute
 
 Contributing is easy! Send a pull request if you feel that anything should be changed, removed, optimized, etc. Issues are also great for reporting bugs. 
 
----
+# License
 
-# TODO:
-
-Here are some upcoming features!
-
-* webNmap
-* DNS Enumeration
+D0xk1t is distributed under a [MIT  License](https://choosealicense.com/licenses/mit/).

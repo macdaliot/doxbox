@@ -101,7 +101,7 @@ class Doxkit(db.Model):
 # Helper function for signal Handler to kill safely 
 # as well as actual application
 def signal_handler(signal, frame):
-    print "Killing D0xk1t. Thanks for playing!"
+    print "\033[1;32m\nKilling D0xk1t. Thanks for playing!\033[0m"
     sys.exit(0)
         
 # Helper function for deserializing model to yaml
@@ -119,6 +119,18 @@ signal.signal(signal.SIGINT, signal_handler)
 user  = socket.gethostname()
 localhost = socket.gethostbyname(user)
 lan_ip = os.popen("ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'").read()
+
+header = '\033[1;34m' + """
+     ______   _______  __   __  ___   _  ____   _______ 
+    |      | |  _    ||  |_|  ||   | | ||    | |       |
+    |  _    || | |   ||       ||   |_| | |   | |_     _|
+    | | |   || | |   ||       ||      _| |   |   |   |  
+    | |_|   || |_|   | |     | |     |_  |   |   |   |  
+    |       ||       ||   _   ||    _  | |   |   |   |  
+    |______| |_______||__| |__||___| |_| |___|   |___|  
+    
+    https://github.com/ex0dus-0x/D0xk1t
+""" + '\033[1;37m'
 
 # Helper function for converting str to dict
 @app.template_filter('to_dict')
@@ -312,4 +324,5 @@ def nmap():
 app.jinja_env.filters['to_dict'] = to_dict 
 
 if __name__ == '__main__':
+    print header
     app.run()
