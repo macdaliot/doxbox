@@ -4,7 +4,7 @@
   {{ super() }}
   <link href="{{ url_for('static', filename='sb-admin.css') }}" rel="stylesheet">
 {% endblock%}
-{% block title %}D0xk1t{% endblock %}
+{% block title %}doxbox{% endblock %}
 {% block body %}
 {% block navbar %}
   <div id="wrapper">
@@ -21,13 +21,13 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li><a href="{{ url_for('index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="{{ url_for('dox') }}"><i class="fa fa-fw fa-file-text"></i> D0x</a></li>
-            <li><a href="{{ url_for('geoip') }}"><i class="fa fa-fw fa-location-arrow"></i> GeoIP Location</a></li>
-            <li><a href="{{ url_for('dns') }}"><i class="fa fa-fw fa-wrench"></i> DNS Enumeration</a></li>
+            <li><a href="{{ url_for('dox') }}"><i class="fa fa-fw fa-file-text"></i> Dox</a></li>
+            <li><a href="{{ url_for('geoip') }}"><i class="fa fa-fw fa-location-arrow"></i> GeoIP</a></li>
+            <li><a href="{{ url_for('dns') }}"><i class="fa fa-fw fa-wrench"></i> DNS Enum</a></li>
           </ul>
         </div>
     </nav>
-  {% endblock %}    
+  {% endblock %}
   <div id="page-wrapper">
     <div class="container-fluid">
       <h1 class="page-heading"> {{ title }} <small>{{ small }}</small></h1>
@@ -51,16 +51,16 @@
             </div>
             <div class="panel-body">
               <p>{{ description }}</p>
-             </div> 
+             </div>
           </div>
-        </div>            
+        </div>
         {% endif %}
         {% block content %}{% endblock %}
       </div>
     </div>
   </div>
-</div>    
-  {% block scripts %}      
+</div>
+  {% block scripts %}
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="{{ url_for('static', filename='doxkit.js') }}"></script>
     <script src="https://use.fontawesome.com/8192e56a39.js"></script>
