@@ -63,7 +63,7 @@ Collects geolocation information on public IP addresses, in order to gather data
 * Google Maps for accurate GeoIP visualization
 * API endpoint support
 
-### DNS Enum
+#### DNS Enum
 
 Collections DNS information in the form of metadata, whether it be an address from a WHOIS lookup, or nameservers.
 

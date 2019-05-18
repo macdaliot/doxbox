@@ -139,14 +139,14 @@ def index():
 
 @app.route('/dox', methods=['GET', 'POST'])
 def dox():
-    description = """  The D0x module is a comprehensive info-gathering database that enables the pentester
-    to write "D0x", or a file that holds a collection of data of a certain target, or targets.
+    description = """  The Dox module is a comprehensive info-gathering database that enables the pentester
+    to write "Dox", or a file that holds a collection of data of a certain target, or targets.
     Using this data, the tester will be able to effectively understand their target, which is a
     critical point in the attacker's kill chain. Usually deemed malicious and black-hat in nature,
     the D0x module, however, aims to help security researchers gain momentum when conducting in-the-field
-    pentesting. <br /> The D0x module does come with several features, improved upon based off of the prior
+    pentesting. The Dox module does come with several features, improved upon based off of the prior
     revision. Not only does it provide an user interface for at-ease use, but also capabilities to store
-    already-collected information, as well as import non-doxbox written D0x reports."""
+    already-collected information, as well as import non-doxbox written Dox reports."""
 
     form = forms.DoxForm()
 
@@ -166,11 +166,11 @@ def dox():
         d = DoxDB(flask.request.form['name'], str(parsed_yaml))
         db.flask.session.add(d)
         db.flask.session.commit()
-        flask.flash("D0x created successfully!", "success")
+        flask.flash("Dox created successfully!", "success")
 
     # Render normally, assumption with GET flask.request
     return flask.render_template('dox.html',
-                            title="D0x Module",
+                            title="Dox Module",
                             small="Writing comprehensive reports for the purpose of information gathering",
                             user=user,
                             description=description,
@@ -207,8 +207,9 @@ def geoip():
     When working with metadata, IP addresses often pop up as a point-of-interest.
     Using Maxmind and Google Map's APIs, the GeoIP module aims to collect geolocation
     information on public IP addresses, in order to gather data on physical location during
-    the reconaissance stage of the killchain. In order to make this module work, please provide a <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps API key</a>.
-    """
+    the reconaissance stage of the killchain. In order to make this module work, please provide a
+    Google Maps API key."""
+
     form = forms.GeoIPForm()
 
     if flask.request.method == "POST":
