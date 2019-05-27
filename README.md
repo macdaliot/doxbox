@@ -43,14 +43,6 @@ SECRET_KEY = 'SECRET_KEY_HERE'
 
 `SECRET_KEY` is the private key utilized by WTForm's CSRF protection feature. If deployed, change it to your liking.
 
-### deploy
-
-Run a development server with `python run.py`. The application will run a first-time boot, and will then be accessible at `127.0.0.1:5000`.
-
-```
-TODO: dockerfile
-```
-
 ## modules
 
 #### Dox
