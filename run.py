@@ -5,9 +5,6 @@ main.py
     Flask routers and handlers for doxbox instance
 
 """
-import doxbox.config as config
-import doxbox.forms as forms
-
 import os
 import sys
 import time
@@ -32,6 +29,7 @@ import flask_sqlalchemy
 from flask_nav.elements import Navbar, View
 from sqlalchemy import Column, Integer, String, Text
 
+from doxbox import config, forms
 
 # initialize flask and config manager
 app = flask.Flask(__name__, template_folder="doxbox/templates")
@@ -233,7 +231,7 @@ def geoip():
 
 @app.route('/api/geoip/<ip_address>')
 def ipinfo(ip_address):
-    geoip = pygeoip.GeoIP("app/GeoLiteCity.dat")
+    geoip = pygeoip.GeoIP("extras/GeoLiteCity.dat")
     ip_data = geoip.record_by_addr(ip_address)
     return flask.jsonify(ip_data)
 

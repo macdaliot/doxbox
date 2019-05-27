@@ -12,17 +12,20 @@ it is perfect for self-hosting an instance during auditing.
 
 ## install
 
-__Quick__:
+doxbox currently utilizes Python 2.7.x due to various dependency clashes and depreciation.
+
+__Docker__:
 
 ```
-$ curl https://raw.githubusercontent.com/ex0dus-0x/doxbox/master/extras/install | sudo /bin/bash
+$ docker build -t doxbox .
+$ docker run -d -p 5000:5000 doxbox
 ```
 
 __Manual:__
 
 ```
 $ git clone https://github.com/ex0dus-0x/doxbox && cd doxbox
-$ # Start virtualenv if you wish
+$ # Initialize virtualenv if you wish
 $ pip install -r requirements.txt
 $ python run.py
 ```
